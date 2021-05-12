@@ -12,7 +12,7 @@ const filterObj = (obj, ...allowedFields) => {
 };
 
 exports.getAllUsers = catchAsync(async (req, res, next) => {
-  const user = await User.find();
+  const user = await User.find(); 
 
   // SEND RESPONSE
   res.status(200).json({
@@ -50,6 +50,15 @@ exports.updateMe = catchAsync(async (req, res, next) => {
   });
 
   next();
+});
+
+exports.deleteMe = catchAsync(async (req, res, next) => {
+  await User.findByIdAndUpdate(req.user.id, { active: false });
+
+  res.status(204).json({
+    status: "success",
+    data: null,
+  });
 });
 
 exports.getUser = (req, res) => {
