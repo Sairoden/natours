@@ -14432,6 +14432,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+// import { loadStripe } from "@stripe/stripe-js";
 var stripe = Stripe("pk_test_51IshInIIa7y3j6hOcZbrG4fdVpIAmPPPJp4WK2i3aDQWv9RJzKufUZEhT5XpS9iUVL9yCudcYyzOtYFOn4XpF2VH00MYku2uBg");
 
 var bookTour =
@@ -14451,7 +14452,7 @@ function () {
 
           case 3:
             session = _context.sent;
-            console.log(session); // 2) Create checkout form + chanre credit card
+            console.log(session); // 2) Create checkout form + charge credit card
 
             _context.next = 7;
             return stripe.redirectToCheckout({
@@ -14510,7 +14511,7 @@ var signupForm = document.querySelector(".form--signup");
 var logOutBtn = document.querySelector(".nav__el--logout");
 var userDataForm = document.querySelector(".form-user-data");
 var userPasswordForm = document.querySelector(".form-user-password");
-var bookBtn = document.getElementById("checkout-button"); // DELEGATION
+var bookBtn = document.getElementById("book-tour"); // DELEGATION
 
 if (mapBox) {
   var locations = JSON.parse(mapBox.dataset.locations);
@@ -14616,7 +14617,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50749" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

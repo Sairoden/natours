@@ -17,7 +17,7 @@ const signupForm = document.querySelector(".form--signup");
 const logOutBtn = document.querySelector(".nav__el--logout");
 const userDataForm = document.querySelector(".form-user-data");
 const userPasswordForm = document.querySelector(".form-user-password");
-const bookBtn = document.getElementById("checkout-button");
+const bookBtn = document.getElementById("book-tour");
 
 // DELEGATION
 if (mapBox) {
