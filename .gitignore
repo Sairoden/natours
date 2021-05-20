@@ -1,4 +1,3 @@
-node_modules
-DATA MODEL.png
-.cache
+node_modules/
 *.env
+.cache/
